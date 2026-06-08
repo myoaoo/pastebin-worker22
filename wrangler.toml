@@ -1,0 +1,22 @@
+name = "pastebin-worker22"
+account_id = "516d0a360ccdea88dd79e9cf5d2bc3aa"
+
+[vars]
+ENVIRONMENT = "production"
+BASE_URL = "https://as.al"
+
+
+# 如果不使用自定义域名，将下面的代码注释掉
+[[routes]]
+pattern = "as.al"
+custom_domain = true
+
+[[r2_buckets]]
+binding = 'BUCKET'
+bucket_name = "oaoo"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pastebins"
+database_id = "c0b11a27-2ec0-4a78-8bc6-5ac8d2c93c71"
+migrations_dir = "./drizzle"
